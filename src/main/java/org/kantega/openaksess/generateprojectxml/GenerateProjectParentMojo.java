@@ -62,6 +62,7 @@ public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
             projectParent = projectParent.replace("#{mavenreleasepluginversion}", mavenreleasepluginversion);
             projectParent = projectParent.replace("#{mavensurefirepluginversion}", mavensurefirepluginversion);
             projectParent = projectParent.replace("#{mavencompilerpluginversion}", mavencompilerpluginversion);
+            projectParent = projectParent.replace("#{mavenjarpluginversion}", mavenjarpluginversion);
             projectParent = projectParent.replaceAll("#\\{mavencompilerplugintarget\\}", mavencompilerplugintarget);
             Properties properties = project.getProperties();
             StringBuilder propertiesNode = new StringBuilder("<properties>");
