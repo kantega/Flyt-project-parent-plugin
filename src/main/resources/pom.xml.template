@@ -78,7 +78,7 @@
 
     #{properties}
 
-    <dependencyManagment>
+    <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.kantega.openaksess</groupId>
@@ -191,5 +191,5 @@
             </dependency>
 
         </dependencies>
-    </dependencyManagment>
+    </dependencyManagement>
 </project>
