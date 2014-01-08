@@ -30,8 +30,11 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+
+import static java.util.Collections.emptyList;
 
 @Mojo(name = "generate-project-parent", requiresProject = true, defaultPhase = LifecyclePhase.INSTALL, threadSafe = true )
 public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
@@ -50,6 +53,9 @@ public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
 
     @Parameter(defaultValue = "1.7")
     private String mavencompilerplugintarget;
+
+    @Parameter
+    private List<String> excludedProperties = emptyList();
 
     @Component
     protected ArtifactInstaller installer;
@@ -70,9 +76,12 @@ public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
             propertiesNode.append(project.getVersion());
             propertiesNode.append("</openaksess.version>");
             for (Map.Entry<Object, Object> entry : properties.entrySet()) {
-                propertiesNode.append("<").append(entry.getKey()).append(">");
-                propertiesNode.append(entry.getValue());
-                propertiesNode.append("</").append(entry.getKey()).append(">\n");
+                String key = (String) entry.getKey();
+                if (!excludedProperties.contains(key)) {
+                    propertiesNode.append("<").append(key).append(">");
+                    propertiesNode.append(entry.getValue());
+                    propertiesNode.append("</").append(key).append(">\n");
+                }
             }
             propertiesNode.append("</properties>");
             projectParent = projectParent.replace("#{properties}", propertiesNode);
