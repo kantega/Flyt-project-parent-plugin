@@ -30,11 +30,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.List;
 import java.util.Map;
 import java.util.Properties;
-
-import static java.util.Collections.emptyList;
+import java.util.regex.Pattern;
 
 @Mojo(name = "generate-project-parent", requiresProject = true, defaultPhase = LifecyclePhase.INSTALL, threadSafe = true )
 public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
@@ -54,13 +52,14 @@ public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
     @Parameter(defaultValue = "1.7")
     private String mavencompilerplugintarget;
 
-    @Parameter
-    private List<String> excludedProperties = emptyList();
+    @Parameter(defaultValue = ".*\\.version")
+    private String includePropertyPattern;
 
     @Component
     protected ArtifactInstaller installer;
 
     public void execute() throws MojoFailureException {
+        Pattern pattern = Pattern.compile(includePropertyPattern);
         getLog().info("Generating project parent pom");
         try {
             String projectParent = IOUtils.toString(getClass().getResource("/pom.xml.template"));
@@ -77,7 +76,7 @@ public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
             propertiesNode.append("</openaksess.version>");
             for (Map.Entry<Object, Object> entry : properties.entrySet()) {
                 String key = (String) entry.getKey();
-                if (!excludedProperties.contains(key)) {
+                if (pattern.matcher(key).matches()) {
                     propertiesNode.append("<").append(key).append(">");
                     propertiesNode.append(entry.getValue());
                     propertiesNode.append("</").append(key).append(">\n");
