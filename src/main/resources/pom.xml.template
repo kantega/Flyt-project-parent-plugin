@@ -95,6 +95,30 @@
 
             <dependency>
                 <groupId>org.kantega.openaksess</groupId>
+                <artifactId>openaksess-search</artifactId>
+                <version>${openaksess.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.kantega.openaksess</groupId>
+                <artifactId>openaksess-search-api</artifactId>
+                <version>${openaksess.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.kantega.openaksess</groupId>
+                <artifactId>openaksess-search-solr</artifactId>
+                <version>${openaksess.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.kantega.openaksess</groupId>
+                <artifactId>openaksess-useradmin</artifactId>
+                <version>${openaksess.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.kantega.openaksess</groupId>
                 <artifactId>openaksess-core</artifactId>
                 <version>${openaksess.version}</version>
             </dependency>
