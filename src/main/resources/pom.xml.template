@@ -75,6 +75,16 @@
                 <inherited>true</inherited>
             </plugin>
         </plugins>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.kantega.openaksess</groupId>
+                    <artifactId>aksess-maven-plugin</artifactId>
+                    <version>${aksess-maven-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
     #{properties}
