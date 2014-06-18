@@ -196,7 +196,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            
+
             <dependency>
                 <groupId>org.ow2.asm</groupId>
                 <artifactId>asm</artifactId>
@@ -206,6 +206,22 @@
                 <groupId>org.ow2.asm</groupId>
                 <artifactId>asm-commons</artifactId>
                 <version>${asm.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.apache.poi</groupId>
+              <artifactId>poi-scratchpad</artifactId>
+              <version>${poi.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.apache.poi</groupId>
+              <artifactId>poi-ooxml</artifactId>
+              <version>${poi.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
