@@ -242,6 +242,16 @@
                 <artifactId>asm-analysis</artifactId>
                 <version>${asm.version}</version>
             </dependency>
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib-nodep</artifactId>
+                <version>${cglib.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.apache.poi</groupId>
