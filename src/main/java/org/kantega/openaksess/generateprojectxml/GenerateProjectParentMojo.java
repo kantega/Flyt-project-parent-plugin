@@ -82,6 +82,7 @@ public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
                     propertiesNode.append("</").append(key).append(">\n");
                 }
             }
+            propertiesNode.append("<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>");
             propertiesNode.append("</properties>");
             projectParent = projectParent.replace("#{properties}", propertiesNode);
 
