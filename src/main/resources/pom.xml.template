@@ -140,6 +140,12 @@
             </dependency>
 
             <dependency>
+                <groupId>org.kantega.openaksess</groupId>
+                <artifactId>openaksess-rating</artifactId>
+                <version>${openaksess.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.kantega.security-api</groupId>
                 <artifactId>security-api</artifactId>
                 <version>${securityapi.version}</version>
