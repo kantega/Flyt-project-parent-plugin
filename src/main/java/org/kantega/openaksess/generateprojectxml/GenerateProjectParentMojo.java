@@ -58,7 +58,7 @@ public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
     @Parameter(defaultValue = "2.8.2")
     private String mavendeploypluginversion;
 
-    @Parameter(defaultValue = "2.10")
+    @Parameter(defaultValue = "2.9.1")
     private String mavenjavadocpluginversion;
 
     @Parameter(defaultValue = ".*\\.version")
@@ -94,7 +94,8 @@ public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
                     propertiesNode.append("</").append(key).append(">\n");
                 }
             }
-            propertiesNode.append("<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>");
+            propertiesNode.append("<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>" +
+                                  "<maven.javadoc.failOnError>false</maven.javadoc.failOnError>");
             propertiesNode.append("</properties>");
             projectParent = projectParent.replace("#{properties}", propertiesNode);
 
