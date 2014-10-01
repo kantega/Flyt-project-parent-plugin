@@ -37,13 +37,13 @@ import java.util.regex.Pattern;
 @Mojo(name = "generate-project-parent", requiresProject = true, defaultPhase = LifecyclePhase.INSTALL, threadSafe = true )
 public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
 
-    @Parameter(defaultValue = "2.4.1")
+    @Parameter(defaultValue = "2.5")
     private String mavenreleasepluginversion;
 
-    @Parameter(defaultValue = "2.4")
+    @Parameter(defaultValue = "2.5")
     private String mavenjarpluginversion;
 
-    @Parameter(defaultValue = "2.15")
+    @Parameter(defaultValue = "2.17")
     private String mavensurefirepluginversion;
 
     @Parameter(defaultValue = "3.1")
@@ -51,6 +51,15 @@ public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
 
     @Parameter(defaultValue = "1.7")
     private String mavencompilerplugintarget;
+
+    @Parameter(defaultValue = "2.3")
+    private String mavensourcepluginversion;
+
+    @Parameter(defaultValue = "2.8.2")
+    private String mavendeploypluginversion;
+
+    @Parameter(defaultValue = "2.10")
+    private String mavenjavadocpluginversion;
 
     @Parameter(defaultValue = ".*\\.version")
     private String includePropertyPattern;
@@ -67,7 +76,10 @@ public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
             projectParent = projectParent.replace("#{mavenreleasepluginversion}", mavenreleasepluginversion);
             projectParent = projectParent.replace("#{mavensurefirepluginversion}", mavensurefirepluginversion);
             projectParent = projectParent.replace("#{mavencompilerpluginversion}", mavencompilerpluginversion);
-            projectParent = projectParent.replace("#{mavenjarpluginversion}", mavenjarpluginversion);
+            projectParent = projectParent.replace("#{mavensourcepluginversion}", mavensourcepluginversion);
+            projectParent = projectParent.replace("#{mavendeploypluginversion}", mavendeploypluginversion);
+            projectParent = projectParent.replace("#{mavencompilerpluginversion}", mavencompilerpluginversion);
+            projectParent = projectParent.replace("#{mavenjavadocpluginversion}", mavenjavadocpluginversion);
             projectParent = projectParent.replaceAll("#\\{mavencompilerplugintarget\\}", mavencompilerplugintarget);
             Properties properties = project.getProperties();
             StringBuilder propertiesNode = new StringBuilder("<properties>");
