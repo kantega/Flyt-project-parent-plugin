@@ -85,17 +85,17 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>${mavenjavadocpluginversion}</version>
+                    <version>#{mavenjavadocpluginversion}</version>
                 </plugin>
 
                 <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
-                    <version>${mavendeploypluginversion}</version>
+                    <version>#{mavendeploypluginversion}</version>
                 </plugin>
 
                 <plugin>
                     <artifactId>maven-source-plugin</artifactId>
-                    <version>${mavensourcepluginversion}</version>
+                    <version>#{mavensourcepluginversion}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
