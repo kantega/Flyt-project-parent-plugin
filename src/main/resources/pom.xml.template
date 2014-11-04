@@ -345,6 +345,11 @@
               <artifactId>jackson-datatype-joda</artifactId>
               <version>${jackson.version}</version>
             </dependency>
+            <dependency>
+              <groupId>org.apache.commons</groupId>
+              <artifactId>commons-compress</artifactId>
+              <version>${commons-compress.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
