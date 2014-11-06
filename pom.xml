@@ -7,7 +7,7 @@
     <name>OpenAksess generate project xml maven-plugin</name>
 
     <scm>
-        <connection>scm:svn:https://opensource.kantega.no/svn/openaksess-projectparent-maven-plugin/trunk</connection>
+        <connection>scm:git:git@gitlab.kantega.no:flyt-cms/flyt-project-parent-plugin.git</connection>
     </scm>
 
     <distributionManagement>
