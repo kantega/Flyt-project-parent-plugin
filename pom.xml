@@ -3,12 +3,13 @@
     <groupId>org.kantega.openaksess</groupId>
     <artifactId>generate-project-xml-maven-plugin</artifactId>
     <packaging>maven-plugin</packaging>
-    <version>1.26-SNAPSHOT</version>
+    <version>1.26</version>
     <name>OpenAksess generate project xml maven-plugin</name>
 
     <scm>
         <connection>scm:git:git@gitlab.kantega.no:flyt-cms/flyt-project-parent-plugin.git</connection>
-    </scm>
+      <tag>generate-project-xml-maven-plugin-1.26</tag>
+  </scm>
 
     <distributionManagement>
         <repository>
