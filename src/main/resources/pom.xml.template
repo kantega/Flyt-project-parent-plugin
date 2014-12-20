@@ -167,7 +167,7 @@
 
             <dependency>
                 <groupId>org.kantega.security-api</groupId>
-                <artifactId>securityapi-common</artifactId>
+                <artifactId>securityapi-compound</artifactId>
                 <version>${securityapi.openimpl.version}</version>
             </dependency>
 
@@ -335,6 +335,7 @@
               <artifactId>tika-xmp</artifactId>
               <version>${tika.version}</version>
             </dependency>
+
             <dependency>
               <groupId>org.apache.pdfbox</groupId>
               <artifactId>pdfbox</artifactId>
@@ -350,6 +351,16 @@
               <groupId>org.apache.pdfbox</groupId>
               <artifactId>pdfbox-lucene</artifactId>
               <version>${pdfbox.version}</version>
+            </dependency>
+             <dependency>
+                <groupId>org.apache.pdfbox</groupId>
+                <artifactId>fontbox</artifactId>
+                <version>${pdfbox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.pdfbox</groupId>
+                <artifactId>jempbox</artifactId>
+                <version>${pdfbox.version}</version>
             </dependency>
 
             <dependency>
