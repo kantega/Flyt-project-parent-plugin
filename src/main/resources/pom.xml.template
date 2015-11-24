@@ -516,6 +516,22 @@
               <artifactId>hibernate-validator</artifactId>
               <version>${hibernate-validation.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.solr</groupId>
+                <artifactId>solr-solrj</artifactId>
+                <version>${solr.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.solr</groupId>
+                <artifactId>solr-core</artifactId>
+                <version>${solr.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.apache.solr</groupId>
+              <artifactId>solr-cell</artifactId>
+              <version>${solr.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
