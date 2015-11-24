@@ -532,6 +532,22 @@
               <artifactId>solr-cell</artifactId>
               <version>${solr.version}</version>
             </dependency>
+
+            <dependency>
+              <groupId>xalan</groupId>
+              <artifactId>xalan</artifactId>
+              <version>${xalan.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>xerces</groupId>
+              <artifactId>xercesImpl</artifactId>
+              <version>${xercesImpl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId>
+                <version>${xml-apis.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
