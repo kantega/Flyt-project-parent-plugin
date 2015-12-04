@@ -113,6 +113,12 @@
 
             <dependency>
                 <groupId>org.kantega.openaksess</groupId>
+                <artifactId>openaksess-content-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.kantega.openaksess</groupId>
                 <artifactId>openaksess-commons</artifactId>
                 <version>${openaksess.version}</version>
             </dependency>
@@ -157,6 +163,12 @@
                 <groupId>org.kantega.openaksess</groupId>
                 <artifactId>openaksess-rating</artifactId>
                 <version>${openaksess.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.kantega.openaksess</groupId>
+                <artifactId>openaksess-metrics</artifactId>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
