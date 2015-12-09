@@ -114,7 +114,7 @@
             <dependency>
                 <groupId>org.kantega.openaksess</groupId>
                 <artifactId>openaksess-content-api</artifactId>
-                <version>${project.version}</version>
+                <version>${openaksess.version}</version>
             </dependency>
 
             <dependency>
