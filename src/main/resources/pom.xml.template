@@ -168,7 +168,7 @@
             <dependency>
                 <groupId>org.kantega.openaksess</groupId>
                 <artifactId>openaksess-metrics</artifactId>
-                <version>${project.version}</version>
+                <version>${openaksess.version}</version>
             </dependency>
 
             <dependency>
