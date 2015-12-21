@@ -113,6 +113,12 @@
 
             <dependency>
                 <groupId>org.kantega.openaksess</groupId>
+                <artifactId>openaksess-content-api</artifactId>
+                <version>${openaksess.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.kantega.openaksess</groupId>
                 <artifactId>openaksess-commons</artifactId>
                 <version>${openaksess.version}</version>
             </dependency>
@@ -156,6 +162,12 @@
             <dependency>
                 <groupId>org.kantega.openaksess</groupId>
                 <artifactId>openaksess-rating</artifactId>
+                <version>${openaksess.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.kantega.openaksess</groupId>
+                <artifactId>openaksess-metrics</artifactId>
                 <version>${openaksess.version}</version>
             </dependency>
 
@@ -407,6 +419,18 @@
               <artifactId>jackson-datatype-joda</artifactId>
               <version>${jackson.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                <artifactId>jackson-jaxrs-base</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                <artifactId>jackson-jaxrs-json-provider</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
             <dependency>
               <groupId>org.apache.commons</groupId>
               <artifactId>commons-compress</artifactId>
@@ -489,6 +513,58 @@
                 <groupId>org.apache.velocity</groupId>
                 <artifactId>velocity-tools</artifactId>
                 <version>${velocity-tools.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.ws.rs</groupId>
+                <artifactId>javax.ws.rs-api</artifactId>
+                <version>${jaxrs.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.glassfish.jersey</groupId>
+                <artifactId>jersey-bom</artifactId>
+                <version>${jersey.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+              <groupId>org.hibernate</groupId>
+              <artifactId>hibernate-validator</artifactId>
+              <version>${hibernate-validation.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.solr</groupId>
+                <artifactId>solr-solrj</artifactId>
+                <version>${solr.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.solr</groupId>
+                <artifactId>solr-core</artifactId>
+                <version>${solr.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.apache.solr</groupId>
+              <artifactId>solr-cell</artifactId>
+              <version>${solr.version}</version>
+            </dependency>
+
+            <dependency>
+              <groupId>xalan</groupId>
+              <artifactId>xalan</artifactId>
+              <version>${xalan.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>xerces</groupId>
+              <artifactId>xercesImpl</artifactId>
+              <version>${xercesImpl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId>
+                <version>${xml-apis.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
