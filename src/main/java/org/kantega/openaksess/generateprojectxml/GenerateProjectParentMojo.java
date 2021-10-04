@@ -30,6 +30,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.Properties;
 import java.util.regex.Pattern;
@@ -40,25 +41,25 @@ public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
     @Parameter(defaultValue = "2.5")
     private String mavenreleasepluginversion;
 
-    @Parameter(defaultValue = "2.5")
+    @Parameter(defaultValue = "2.5.3")
     private String mavenjarpluginversion;
 
-    @Parameter(defaultValue = "2.17")
+    @Parameter(defaultValue = "2.9")
     private String mavensurefirepluginversion;
 
-    @Parameter(defaultValue = "3.1")
+    @Parameter(defaultValue = "3.8.1")
     private String mavencompilerpluginversion;
 
-    @Parameter(defaultValue = "1.7")
+    @Parameter(defaultValue = "1.8")
     private String mavencompilerplugintarget;
 
-    @Parameter(defaultValue = "2.3")
+    @Parameter(defaultValue = "3.2.1")
     private String mavensourcepluginversion;
 
     @Parameter(defaultValue = "2.8.2")
     private String mavendeploypluginversion;
 
-    @Parameter(defaultValue = "2.9.1")
+    @Parameter(defaultValue = "3.3.1")
     private String mavenjavadocpluginversion;
 
     @Parameter(defaultValue = ".*\\.version")
@@ -71,7 +72,7 @@ public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
         Pattern pattern = Pattern.compile(includePropertyPattern);
         getLog().info("Generating project parent pom");
         try {
-            String projectParent = IOUtils.toString(getClass().getResource("/pom.xml.template"));
+            String projectParent = IOUtils.toString(getClass().getResource("/pom.xml.template"), StandardCharsets.UTF_8);
             projectParent = projectParent.replace("#{openaksessversion}", project.getVersion());
             projectParent = projectParent.replace("#{mavenreleasepluginversion}", mavenreleasepluginversion);
             projectParent = projectParent.replace("#{mavensurefirepluginversion}", mavensurefirepluginversion);
@@ -102,7 +103,7 @@ public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
 
             File projectParentFile = getProjectParentFile();
             try(OutputStream outputStream = new FileOutputStream(projectParentFile)){
-                IOUtils.write(projectParent, outputStream);
+                IOUtils.write(projectParent, outputStream, StandardCharsets.UTF_8);
             }
 
             Artifact pom = getArtifact(projectParentFile);
