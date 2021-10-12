@@ -41,7 +41,7 @@ public class GenerateProjectParentMojo extends AbstractProjectParentMojo {
     @Parameter(defaultValue = "2.5")
     private String mavenreleasepluginversion;
 
-    @Parameter(defaultValue = "2.5.3")
+    @Parameter(defaultValue = "3.2.0")
     private String mavenjarpluginversion;
 
     @Parameter(defaultValue = "2.9")
