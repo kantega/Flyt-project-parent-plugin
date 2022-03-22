@@ -221,7 +221,11 @@
               <artifactId>javax.servlet.jsp.jstl-api</artifactId>
               <version>${javax.servlet.jstl-api}</version>
             </dependency>
-
+            <dependency>
+                <groupId>javax.annotation</groupId>
+                <artifactId>javax.annotation-api</artifactId>
+                <version>${javax.annotation-api}</version>
+            </dependency>
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
